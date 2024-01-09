@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:rive_example/bird.dart';
 import 'package:rive_example/lil_guy_one.dart';
 import 'package:rive_example/lil_guy_two.dart';
 
@@ -22,12 +23,15 @@ class MyApp extends StatelessWidget {
 
   // LilGuyTwo()
   // bard 안에 있는 Button을 클릭하여 동작 시키는 버전
-  List<Widget> widgets = [const LilGuyone(), const LilGuyTwo()];
+
+  // Bird()
+  // Toggle을 하면 춤을 추고, 버튼을 클릭하면 예정된 움직임 한번 실행되는 버전
+  List<Widget> widgets = [const LilGuyone(), const LilGuyTwo(), const Bird()];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
